@@ -1,0 +1,7 @@
+name 'dbresson_challenge'
+maintainer 'The Authors'
+maintainer_email 'dabresson@gmail.com'
+license 'all_rights'
+description 'Installs/Configures dbresson_challenge'
+long_description 'Installs/Configures dbresson_challenge'
+version '0.1.0'
