@@ -1,0 +1,4 @@
+#!/bin/sh
+exec 2>&1
+cd <%= node['challenge']['path'] %>/current
+exec <%= node['runit']['chpst_bin'] %> -u <%= node['challenge']['user'] %>:<%= node['challenge']['group'] %> node <%= node['challenge']['entry_point'] %>

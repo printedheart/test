@@ -1,0 +1,5 @@
+default['challenge']['path'] = '/srv/challenge'
+default['challenge']['user'] = 'challenge'
+default['challenge']['group'] = 'challenge'
+default['challenge']['repo'] = 'https://github.com/jaustinhughey/hello-world-node-express'
+default['challenge']['entry_point'] = 'app.js'
