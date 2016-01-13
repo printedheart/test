@@ -9,6 +9,7 @@ challenge = node['challenge']
 include_recipe 'nodejs'
 include_recipe 'runit'
 include_recipe 'nginx'
+include_recipe 'rsyslog::client'
 
 package 'git'
 
@@ -30,3 +31,16 @@ deploy 'challenge' do
   symlink_before_migrate({})
   action :deploy
 end
+
+template "#{node['nginx']['dir']}/sites-available/challenge" do
+  source 'challenge.nginx.conf.erb'
+  user 'root'
+  group 'root'
+  mode '644'
+end
+
+nginx_site 'default' do
+  enable false
+end
+
+nginx_site 'challenge'
