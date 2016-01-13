@@ -5,3 +5,7 @@ license 'all_rights'
 description 'Installs/Configures dbresson_challenge'
 long_description 'Installs/Configures dbresson_challenge'
 version '0.1.0'
+
+depends 'nginx', '~> 2.7'
+depends 'nodejs', '~> 2.4'
+depends 'runit', '~> 1.7'
